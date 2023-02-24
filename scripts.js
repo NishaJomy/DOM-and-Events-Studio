@@ -54,11 +54,35 @@ abortButton.addEventListener("click",function(){
         shuttleheight.innerHTML="0";
 
     }
-
 })
+let imjObj=document.getElementById("rocket");
+imjObj.style.position="absolute";
+imjObj.style.bottom='0px';
+imjObj.style.left='0px';
 
+let upButton=this.document.getElementById("up");
+upButton.addEventListener("click",function(){
+let movement=parseInt(imjObj.style.bottom)+10+"px";
+imjObj.style.bottom=movement;
+let shuttleheight=document.getElementById("spaceShuttleHeight");
+shuttleheight.innerHTML=parseInt(shuttleheight.innerHTML)+10000;
+})
 let downButton=this.document.getElementById("down");
 downButton.addEventListener("click",function(){
+let movement=parseInt(imjObj.style.bottom)-10+"px";
+imjObj.style.bottom=movement;
+let shuttleheight=document.getElementById("spaceShuttleHeight");
+shuttleheight.innerHTML=parseInt(shuttleheight.innerHTML)-10000;
 
+})
+let rightButton=this.document.getElementById("right");
+rightButton.addEventListener("click",function(){
+let movement=parseInt(imjObj.style.left)+10+"px";
+imjObj.style.left=movement;
+})
+let leftButton=this.document.getElementById("left");
+leftButton.addEventListener("click",function(){
+let movement=parseInt(imjObj.style.left)-10+"px";
+imjObj.style.left=movement;
 })
 })
